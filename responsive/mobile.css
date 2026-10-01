@@ -1,0 +1,890 @@
+/* ==========================================================================
+   MOBILE STYLES (Viewport width < 768px)
+   Aken Tech Solution - Pixel-Accurate Mobile Adaptation
+   ========================================================================== */
+
+@media (max-width: 767px) {
+  /* Container Baseline */
+  .container {
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  /* Top Bar: Clean compact strip */
+  .top-bar-left {
+    display: none !important;
+  }
+
+  .top-bar .container {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .top-bar-right {
+    gap: 14px;
+    font-size: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .top-bar-socials {
+    padding-left: 8px;
+    gap: 8px;
+  }
+
+  /* Navigation Header */
+  .header-container {
+    height: 64px;
+  }
+
+  .logo-symbol {
+    width: 34px;
+    height: 34px;
+  }
+
+  .logo-title {
+    font-size: 16px;
+  }
+
+  .logo-tagline {
+    font-size: 7.5px;
+  }
+
+  /* Hide Desktop CTA inside Header on mobile */
+  .main-header .btn-primary {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: #f1f5f9;
+    color: #0f172a;
+    transition: background 0.2s;
+  }
+
+  .mobile-toggle:active {
+    background: #e2e8f0;
+  }
+
+  /* Mobile Backdrop Overlay */
+  .mobile-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(5, 19, 41, 0.45);
+    backdrop-filter: blur(2px);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+  }
+
+  .mobile-backdrop.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Mobile Navigation Menu - Width between 40% and 60%, Height only as needed */
+  .nav-menu {
+    position: fixed;
+    top: 68px;
+    right: 12px;
+    left: auto;
+    bottom: auto;
+    width: 52%;
+    min-width: 190px;
+    max-width: 60%;
+    height: auto;
+    max-height: calc(100vh - 84px);
+    background: #ffffff;
+    flex-direction: column;
+    padding: 10px 8px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.16);
+    display: flex;
+    z-index: 999;
+    overflow-y: auto;
+    gap: 3px;
+    transform: translateY(-8px) scale(0.97);
+    transform-origin: top right;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .nav-menu.open {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Main navigation items aligned to the left corner */
+  .nav-item-dropdown {
+    width: 100%;
+  }
+
+  .nav-link {
+    font-size: 13.5px;
+    font-weight: 600;
+    padding: 8px 10px;
+    border-radius: 7px;
+    color: #1e293b;
+    border-bottom: 1px solid #f8fafc;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    background: #eff6ff;
+    color: var(--accent-blue);
+  }
+
+  .nav-link.active::after {
+    display: none;
+  }
+
+  /* Sub-menu options: Positioned towards middle and right with clean accent line */
+  .dropdown-menu {
+    display: none;
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    margin: 4px 2px 8px 14px;
+    background: #f8fafc;
+    border-left: 2.5px solid var(--accent-blue);
+    border-top: 1px solid #e2e8f0;
+    border-right: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+    border-radius: 0 8px 8px 0;
+    padding: 5px 6px 5px 8px;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  }
+
+  .dropdown-menu a {
+    padding: 5px 8px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #334155;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.15s ease;
+  }
+
+  .dropdown-menu a::before {
+    content: '›';
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent-blue);
+    line-height: 1;
+  }
+
+  .dropdown-menu a:hover {
+    background: #e0f2fe;
+    color: var(--accent-blue);
+    padding-left: 10px;
+  }
+
+  /* Hero Section: Mobile (Text first, image below as specified) */
+  .hero-section {
+    padding: 32px 0 46px 0;
+  }
+
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-kicker {
+    font-size: 10.5px;
+    letter-spacing: 1.5px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 14px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+    line-height: 1.55;
+    margin-bottom: 22px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .hero-actions .btn-primary,
+  .hero-actions .btn-secondary {
+    width: 100%;
+    justify-content: center;
+    padding: 13px;
+    font-size: 14px;
+  }
+
+  .hero-social-proof {
+    margin-top: 14px;
+    justify-content: center;
+  }
+
+  /* Scaled Laptop Mockup for Mobile */
+  .laptop-mockup-container {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .laptop-screen {
+    border-width: 5px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .laptop-base {
+    margin: 0 -12px;
+    height: 10px;
+  }
+
+  .screen-body {
+    padding: 12px 10px;
+  }
+
+  .dash-top {
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+  }
+
+  .dash-title {
+    font-size: 13px;
+  }
+
+  .dash-stats-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+
+  .dash-stat-box {
+    padding: 6px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .stat-box-label {
+    font-size: 11px;
+    margin-bottom: 0;
+  }
+
+  .stat-box-num {
+    font-size: 14px;
+  }
+
+  .dash-chart-mock {
+    height: 64px;
+    gap: 4px;
+  }
+
+  .floating-badge-top {
+    top: -12px;
+    right: -6px;
+    padding: 6px 10px;
+    border-radius: 6px;
+  }
+
+  .badge-headline {
+    font-size: 10px;
+  }
+
+  .badge-sub {
+    font-size: 8.5px;
+  }
+
+  .floating-script-bottom {
+    position: static;
+    margin-top: 16px;
+    text-align: center;
+  }
+
+  .floating-script-bottom .handwritten {
+    font-size: 21px;
+  }
+
+  /* Section 3: 7 Service Cards Row (2 columns on mobile) */
+  .services-bar-section {
+    padding: 28px 0;
+  }
+
+  .services-grid-7 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .services-grid-7 > :last-child {
+    grid-column: span 2;
+  }
+
+  .service-card-mini {
+    padding: 16px 10px;
+    border-radius: 10px;
+  }
+
+  .service-icon-box {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+
+  .service-title-mini {
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+
+  .service-desc-mini {
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+
+  /* Section 4: Real Estate Lead Generation Banner (1 column stack) */
+  .real-estate-banner-section {
+    padding: 36px 0;
+  }
+
+  .real-estate-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .re-image-wrapper {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+  }
+
+  .re-title {
+    font-size: 23px;
+    line-height: 1.25;
+  }
+
+  .re-tags-row {
+    gap: 6px;
+  }
+
+  .re-tag {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+
+  .re-stats-column {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    width: 100%;
+  }
+
+  .re-stat-card {
+    padding: 10px 4px;
+    border-radius: 8px;
+  }
+
+  .re-stat-number {
+    font-size: 18px;
+  }
+
+  .re-stat-label {
+    font-size: 10px;
+  }
+
+  .re-content .btn-primary {
+    width: 100%;
+    justify-content: center;
+    padding: 12px;
+  }
+
+  /* Section 5: Why Choose Aken Tech (1 column) */
+  .why-choose-section {
+    padding: 44px 0;
+  }
+
+  .heading-main {
+    font-size: 24px;
+    line-height: 1.25;
+  }
+
+  .why-choose-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 24px;
+  }
+
+  .why-card {
+    padding: 20px 18px;
+  }
+
+  /* Section 6: 4-Step Process - Option 3: Horizontal Progress Rail Mobile */
+  .process-section {
+    padding: 44px 0 52px 0;
+  }
+
+  .process-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+
+  .progress-rail-track {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 6px !important;
+    margin-bottom: 20px !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  .progress-rail-line {
+    display: none !important;
+  }
+
+  .rail-node {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 8px 3px !important;
+    font-size: 11px !important;
+    gap: 2px !important;
+    text-align: center !important;
+    border-radius: 10px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    min-width: 0 !important;
+  }
+
+  .rail-node-dot {
+    display: none !important;
+  }
+
+  .rail-node-label {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 1.2 !important;
+    width: 100% !important;
+  }
+
+  .node-step-num {
+    font-size: 10px !important;
+    font-weight: 800 !important;
+    color: #38bdf8 !important;
+  }
+
+  .node-step-name {
+    font-size: 10.5px !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    max-width: 100% !important;
+  }
+
+  .rail-node.active::after {
+    bottom: -6px !important;
+    border-left: 6px solid transparent !important;
+    border-right: 6px solid transparent !important;
+    border-top: 6px solid #38bdf8 !important;
+  }
+
+  .process-rail-cards {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 14px;
+    padding: 6px 4px 18px 4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .process-rail-cards::-webkit-scrollbar {
+    display: none;
+  }
+
+  .process-rail-card {
+    flex: 0 0 84%;
+    min-width: 260px;
+    scroll-snap-align: center;
+    padding: 22px 18px;
+    border-radius: 14px;
+  }
+
+  .rail-card-title {
+    font-size: 16px;
+  }
+
+  .rail-card-desc {
+    font-size: 13px;
+  }
+
+  /* Section 7: Featured Projects (Strict 1 card per row as specified in guide) */
+  .projects-section {
+    padding: 44px 0;
+  }
+
+  .section-head-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .projects-grid-4 {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .project-card-image {
+    height: 180px;
+  }
+
+  /* Section 8: Testimonials (Stacked) */
+  .testimonials-section {
+    padding: 44px 0;
+  }
+
+  .testimonials-grid-split {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .testimonial-card-main {
+    padding: 24px 18px;
+    border-radius: 12px;
+  }
+
+  .testimonial-quote-text {
+    font-size: 14px;
+  }
+
+  .cta-card-soft-blue {
+    padding: 28px 18px;
+    border-radius: 12px;
+  }
+
+  .cta-card-title {
+    font-size: 20px;
+  }
+
+  /* Section 9: Latest Blog (Strict 1 card per row as specified in guide) */
+  .blog-section {
+    padding: 44px 0;
+  }
+
+  .blog-grid-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .blog-card-image {
+    height: 160px;
+  }
+
+  /* Section 10: Final CTA Banner */
+  .final-cta-section {
+    padding: 40px 0;
+  }
+
+  .final-cta-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    text-align: center;
+  }
+
+  .cta-left-heading {
+    font-size: 23px;
+  }
+
+  .cta-center-button {
+    width: 100%;
+  }
+
+  .cta-center-button .btn-white {
+    width: 100%;
+    justify-content: center;
+    padding: 13px;
+  }
+
+  .cta-right-perks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    text-align: left;
+  }
+
+  /* Section 11: Footer (1 column stack) */
+  .main-footer {
+    padding: 44px 0 0 0;
+  }
+
+  .footer-grid-4 {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-bottom: 32px;
+  }
+
+  .footer-bottom-bar .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .legal-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  /* Stats Bar: 2x2 grid */
+  .stats-banner-bar {
+    padding: 20px 0;
+  }
+
+  .stats-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .stat-item-block {
+    gap: 10px;
+  }
+
+  .stat-icon-wrap {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+  }
+
+  .stat-main-num {
+    font-size: 20px;
+  }
+
+  .stat-sub-text {
+    font-size: 11.5px;
+  }
+
+  /* About Us Page Mobile */
+  .about-story-section {
+    padding: 44px 0;
+  }
+
+  .about-story-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .office-building-card {
+    height: 220px;
+  }
+
+  .building-overlay-text {
+    bottom: 12px;
+    right: 12px;
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .mission-vision-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 30px;
+  }
+
+  .mv-card {
+    padding: 20px 16px;
+  }
+
+  .values-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .team-section {
+    padding: 44px 0;
+  }
+
+  .team-grid-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  /* Services Page Mobile (Horizontal scrollable tabs) */
+  .filter-tabs-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 4px 0 16px 0;
+    gap: 8px;
+  }
+
+  .filter-tabs-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-tab-btn {
+    padding: 7px 16px;
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+
+  .services-full-grid-6 {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .deep-dive-section {
+    padding: 36px 0;
+  }
+
+  .deep-dive-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .deep-dive-image-wrap {
+    height: 200px;
+    width: 100%;
+  }
+
+  /* Industries Page Mobile (Strict 1 card per row as specified in guide) */
+  .industries-grid-12 {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  /* Blog Page Mobile */
+  .featured-article-card {
+    display: flex;
+    flex-direction: column;
+    margin: 24px 0;
+  }
+
+  .featured-article-body {
+    padding: 24px 18px;
+  }
+
+  .featured-article-title {
+    font-size: 19px;
+  }
+
+  .featured-article-graphic {
+    padding: 30px 18px;
+  }
+
+  .newsletter-banner {
+    flex-direction: column;
+    padding: 24px 18px;
+    gap: 18px;
+    margin: 36px 0;
+  }
+
+  .newsletter-form-wrap {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .newsletter-form-wrap input,
+  .newsletter-form-wrap button {
+    width: 100%;
+  }
+
+  .popular-topics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  /* Contact Page Mobile */
+  .contact-info-grid-4 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .contact-main-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .contact-form-box {
+    padding: 20px 16px;
+  }
+
+  .form-group-row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .interactive-map-box {
+    min-height: 280px;
+  }
+
+  .faq-grid-split {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Modal Dialog for Mobile */
+  .modal-dialog {
+    padding: 24px 18px;
+    margin: 16px;
+  }
+}

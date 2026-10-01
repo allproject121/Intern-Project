@@ -1,0 +1,228 @@
+/* ==========================================================================
+   DESKTOP STYLES (Viewport width >= 1024px)
+   Aken Tech Solution - Pixel-Accurate Desktop Layout
+   ========================================================================== */
+
+@media (min-width: 1024px) {
+  /* Container Baseline */
+  .container {
+    max-width: 1240px;
+    padding: 0 28px;
+    margin: 0 auto;
+  }
+
+  /* Top Bar */
+  .top-bar-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13.5px;
+  }
+
+  /* Navigation Header */
+  .header-container {
+    height: 76px;
+  }
+
+  .nav-menu {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    gap: 24px;
+  }
+
+  .mobile-toggle {
+    display: none !important;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 68px 0 80px 0;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.08fr;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: 44px;
+    line-height: 1.15;
+    letter-spacing: -1px;
+  }
+
+  .laptop-mockup-container {
+    max-width: 580px;
+  }
+
+  /* Section 3: 7 Service Cards Row (Strict 7 columns) */
+  .services-grid-7 {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 14px;
+  }
+
+  .service-card-mini {
+    padding: 18px 10px;
+  }
+
+  /* Section 4: Real Estate Lead Generation Banner (3 columns) */
+  .real-estate-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 1.35fr 0.9fr;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .re-image-wrapper {
+    height: 280px;
+  }
+
+  .re-stats-column {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  /* Section 5: Why Choose Aken Tech (4 columns) */
+  .why-choose-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  /* Section 6: 4-Step Process - Option 3 Progress Rail Desktop */
+  .process-rail-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+  }
+
+  /* Section 7: Featured Projects (4 columns) */
+  .projects-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  /* Section 8: Testimonials Split */
+  .testimonials-grid-split {
+    display: grid;
+    grid-template-columns: 1.45fr 1fr;
+    gap: 28px;
+    align-items: stretch;
+  }
+
+  /* Section 9: Latest Blog (3 columns) */
+  .blog-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  /* Section 10: Final CTA Banner (3 zones) */
+  .final-cta-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1.2fr;
+    align-items: center;
+    gap: 32px;
+  }
+
+  /* Section 11: Footer (4 columns) */
+  .footer-grid-4 {
+    display: grid;
+    grid-template-columns: 1.4fr 0.9fr 1.1fr 1.2fr;
+    gap: 36px;
+  }
+
+  /* About Us: Stats & Stories */
+  .stats-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .about-story-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .mission-vision-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .values-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .team-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  /* Services: 6 Service Boxes (2 rows x 3 cols) */
+  .services-full-grid-6 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .deep-dive-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+
+  /* Industries: 12 Grid (4 cards per row) */
+  .industries-grid-12 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  /* Blog: Featured Article Split */
+  .featured-article-card {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+  }
+
+  .popular-topics-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 14px;
+  }
+
+  /* Contact: 4 Info Cards & Form + Map Split */
+  .contact-info-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .contact-main-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 36px;
+  }
+
+  .faq-grid-split {
+    display: grid;
+    grid-template-columns: 1.45fr 1fr;
+    gap: 32px;
+    align-items: flex-start;
+  }
+}

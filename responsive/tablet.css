@@ -1,0 +1,264 @@
+/* ==========================================================================
+   TABLET STYLES (Viewport width: 768px to 1023px)
+   Aken Tech Solution - Pixel-Accurate Tablet Adaptation
+   ========================================================================== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Container Baseline */
+  .container {
+    max-width: 100%;
+    padding: 0 24px;
+  }
+
+  /* Top Bar */
+  .top-bar-left {
+    font-size: 12.5px;
+  }
+  .top-bar-right {
+    gap: 16px;
+  }
+
+  /* Navigation Header */
+  .header-container {
+    height: 72px;
+  }
+
+  .nav-menu {
+    gap: 16px;
+  }
+
+  .nav-link {
+    font-size: 13.5px;
+  }
+
+  .btn-primary {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 50px 0 60px 0;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  .hero-description {
+    font-size: 14.5px;
+  }
+
+  .laptop-mockup-container {
+    max-width: 100%;
+  }
+
+  /* Floating script */
+  .floating-script-bottom {
+    bottom: -36px;
+    right: 0;
+  }
+  .floating-script-bottom .handwritten {
+    font-size: 22px;
+  }
+
+  /* Section 3: Service Cards (3-4 columns on tablet) */
+  .services-grid-7 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  .services-grid-7 > :last-child {
+    grid-column: span 2;
+  }
+
+  /* Section 4: Real Estate Lead Generation Banner */
+  .real-estate-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .re-stats-column {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+  }
+
+  .re-stat-card {
+    flex: 1;
+  }
+
+  /* Section 5: Why Choose Aken Tech (2x2 grid) */
+  .why-choose-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  /* Section 6: 4-Step Process (2x2 grid) */
+  .process-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .process-steps-grid::before {
+    display: none;
+  }
+
+  /* Section 7: Featured Projects (Strict 2 per row as specified in guide) */
+  .projects-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* Section 8: Testimonials */
+  .testimonials-grid-split {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 20px;
+  }
+
+  .testimonial-card-main {
+    padding: 28px 24px;
+  }
+
+  .cta-card-soft-blue {
+    padding: 28px 20px;
+  }
+
+  .cta-card-title {
+    font-size: 22px;
+  }
+
+  /* Section 9: Latest Blog (Strict 2 per row as specified in guide) */
+  .blog-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .blog-grid-3 > :last-child {
+    grid-column: span 2;
+  }
+
+  /* Section 10: Final CTA Banner */
+  .final-cta-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 24px;
+  }
+
+  .cta-right-perks {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  /* Section 11: Footer (2x2 columns) */
+  .footer-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  /* Stats Banner (2x2 columns) */
+  .stats-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* About Us */
+  .about-story-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 24px;
+  }
+
+  .values-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .team-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .team-grid-3 > :last-child {
+    grid-column: span 2;
+  }
+
+  /* Services Page (2 columns) */
+  .services-full-grid-6 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .deep-dive-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  /* Industries Page (Strict 2 per row as specified in guide) */
+  .industries-grid-12 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  /* Blog Page */
+  .featured-article-card {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+  }
+
+  .newsletter-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .popular-topics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  /* Contact Page */
+  .contact-info-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .contact-main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .faq-grid-split {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 20px;
+  }
+}
